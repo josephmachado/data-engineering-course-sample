@@ -1,6 +1,6 @@
-# Data Engineering Course 
+# Sample of Data Engineering Course: Idempotency 
 
-Code for Startdataengineering's [Data Engineering Course Sample]()
+Sample Code for Startdataengineering's [Data Engineering Course]()
 
 ## Setup 
 
