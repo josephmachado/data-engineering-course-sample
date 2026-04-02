@@ -13,10 +13,10 @@ services:
     image: sde-decourse-airflow-spark
     container_name: airflow-spark
     ports:
-      - "8080:8080"   # Airflow webserver
+      #- "8080:8080"   # Airflow webserver
       - "8888:8888"   # Jupyter Lab
-      - "4040-4049:4040-4049" # Spark UI
-      - '18080:18080' # Spark History Server
+      #- "4040-4049:4040-4049" # Spark UI
+      #- '18080:18080' # Spark History Server
     volumes:
       - ./notebooks:/home/airflow/notebooks
       - ./datagen:/home/airflow/datagen
