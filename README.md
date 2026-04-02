@@ -2,7 +2,9 @@
 
 Sample Code for Startdataengineering's [Data Engineering Course]()
 
-## Setup 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/josephmachado/data-engineering-course-sample)
+
+## Local Setup 
 
 **Prerequistites**
 
