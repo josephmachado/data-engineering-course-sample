@@ -1,8 +1,10 @@
 # Sample of Data Engineering Course: Idempotency 
 
-Sample Code for Startdataengineering's [Data Engineering Course]()
+Sample Code for Startdataengineering's **Data Engineering Course**.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/josephmachado/data-engineering-course-sample)
+
+Open code in GitHub Codespaces and wait for a few minutes. The `docker compose up -d --build` command will run automatically.
 
 ## Local Setup 
 
