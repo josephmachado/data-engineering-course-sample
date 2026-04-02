@@ -1,0 +1,8 @@
+{
+  "postStartCommand": "docker compose up -d --build",
+  "customizations": {
+    "codespaces": {
+      "openWith": "jupyter"
+    }
+  }
+}
