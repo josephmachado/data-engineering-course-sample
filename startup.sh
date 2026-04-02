@@ -5,7 +5,7 @@ set -e
 source /home/airflow/.venv/bin/activate
 
 # Start Airflow in the background
-airflow standalone &
+# airflow standalone &
 
 # Create data 
 
