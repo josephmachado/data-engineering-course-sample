@@ -9,6 +9,8 @@ Sample Code for Startdataengineering's [Data Engineering Course]()
 1. [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 
+**Windows users**: Please use WSL and Install Ubuntu using this [document](https://documentation.ubuntu.com/wsl/stable/howto/install-ubuntu-wsl2/#). In your ubuntu terminal install the prerequisites above.
+
 Start the containers with 
 
 ```bash 
