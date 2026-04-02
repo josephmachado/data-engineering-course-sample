@@ -21,20 +21,20 @@ services:
       - ./notebooks:/home/airflow/notebooks
       - ./datagen:/home/airflow/datagen
 
-  postgres:
-    container_name: postgres
-    image: postgres:18
-    environment:
-      POSTGRES_USER: dataengineer
-      POSTGRES_PASSWORD: datapipeline
-      POSTGRES_DB: ecommerce
-    # volumes:
-      # - ./data:/input_data
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "dataengineer" ]
-      interval: 5s
-      retries: 5
-    restart: always
-    ports:
-      - "5432:5432"
+  # postgres:
+  #   container_name: postgres
+  #   image: postgres:18
+  #   environment:
+  #     POSTGRES_USER: dataengineer
+  #     POSTGRES_PASSWORD: datapipeline
+  #     POSTGRES_DB: ecommerce
+  #   # volumes:
+  #     # - ./data:/input_data
+  #   healthcheck:
+  #     test: [ "CMD", "pg_isready", "-U", "dataengineer" ]
+  #     interval: 5s
+  #     retries: 5
+  #   restart: always
+  #   ports:
+  #     - "5432:5432"
 
