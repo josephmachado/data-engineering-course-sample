@@ -6,6 +6,10 @@ Sample Code for Startdataengineering's **Data Engineering Course**.
 
 In GitHub Codespaces wait a few minutes, the `docker compose up -d --build` command will run automatically.
 
+After which click on the `ports` tab and the `world` icon next to link with port 8888 to open jupyterlab in your browser.
+
+add: image
+
 ## Local Setup 
 
 **Prerequistites**
