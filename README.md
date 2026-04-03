@@ -2,8 +2,6 @@
 
 Sample chapter from Startdataengineering's **Data Engineering Course**.
 
-[![Sample Chapter](https://img.youtube.com/vi/SKtKoyVQHXs/0.jpg)](https://www.youtube.com/watch?v=SKtKoyVQHXs)
-
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/josephmachado/data-engineering-course-sample)
 
 In GitHub Codespaces wait a few minutes, the `docker compose up -d --build` command will run automatically.
