@@ -33,8 +33,6 @@ sleep 30 # sleep 30 seconds to wait for the container and its services to fully 
 
 Start the course by opening Jupyter Lab at [http://localhost:8888/](http://localhost:8888/)
 
-Open Airflow UI at [http://localhost:8080/](http://localhost:8080/) 
-
 ## Spin Down
 
 Once you are done, stop the containers with the following command.
