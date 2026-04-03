@@ -1,6 +1,8 @@
 # Sample of Data Engineering Course: Idempotency 
 
-Sample Code for Startdataengineering's **Data Engineering Course**.
+Sample chapter from Startdataengineering's **Data Engineering Course**.
+
+[![Sample Chapter](https://img.youtube.com/vi/SKtKoyVQHXs/0.jpg)](https://www.youtube.com/watch?v=SKtKoyVQHXs)
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/josephmachado/data-engineering-course-sample)
 
