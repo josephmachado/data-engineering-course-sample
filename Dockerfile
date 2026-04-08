@@ -19,8 +19,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-ARG TARGETARCH
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-${TARGETARCH}
+
+# Fix JAVA_HOME for arm64 (aarch64) vs amd64
+# ARG TARGETARCH
+# RUN case "$TARGETARCH" in \
+#       arm64) JAVAARCH="aarch64" ;; \
+#       *) JAVAARCH="$TARGETARCH" ;; \
+#     esac && \
+#     ln -s /usr/lib/jvm/java-17-openjdk-${JAVAARCH} /usr/lib/jvm/java-17-openjdk-current
+# Replace with this:
+RUN ln -s $(ls -d /usr/lib/jvm/java-17-openjdk-* | grep -v current | head -1) \
+    /usr/lib/jvm/java-17-openjdk-current
+
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-current
+
 ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Install Spark 

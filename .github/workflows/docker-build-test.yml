@@ -1,0 +1,62 @@
+name: Test Docker Multi-Arch Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    strategy:
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            platform: linux/amd64
+          - runner: ubuntu-24.04-arm
+            platform: linux/arm64
+
+    runs-on: ${{ matrix.runner }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/hostedtoolcache
+          sudo docker image prune -af
+          df -h  # confirm available space after cleanup
+
+      - name: Start services
+        run: |
+          docker compose up -d --build
+
+      - name: Debug ARM JVM directory
+        run: |
+          docker compose run --rm --no-deps airflow-spark bash -c \
+            'ls -la /usr/lib/jvm/ && \
+             find /usr/lib/jvm -name "java" -type f 2>/dev/null'
+
+      - name: Test Java is working
+        run: |
+          docker compose run --rm --no-deps airflow-spark java -version
+
+      - name: Test JAVA_HOME is set correctly
+        run: |
+          docker compose run --rm --no-deps airflow-spark bash -c 'echo JAVA_HOME=$JAVA_HOME && ls $JAVA_HOME'
+
+      - name: Test Airflow is installed
+        run: |
+          docker compose run --rm --no-deps airflow-spark bash -c "source /home/airflow/.venv/bin/activate && airflow version"
+
+      - name: Test PySpark is working
+        run: |
+          docker compose run --rm --no-deps airflow-spark bash -c "source /home/airflow/.venv/bin/activate && python -c 'from pyspark.sql import SparkSession; print(SparkSession.builder.getOrCreate().version)'"
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v
