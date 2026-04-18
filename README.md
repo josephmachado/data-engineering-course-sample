@@ -1,6 +1,14 @@
+- [Sample of Data Engineering Course: Idempotency](#sample-of-data-engineering-course-idempotency)
+  - [Codespaces setup](#codespaces-setup)
+  - [Local Setup](#local-setup)
+  - [Start Learning](#start-learning)
+  - [Spin Down](#spin-down)
+
 # Sample of Data Engineering Course: Idempotency 
 
 Sample chapter from Startdataengineering's **Data Engineering Course**.
+
+## Codespaces setup 
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/josephmachado/data-engineering-course-sample)
 
@@ -31,7 +39,11 @@ sleep 30 # sleep 30 seconds to wait for the container and its services to fully 
 
 ```
 
+## Start Learning 
+
 Start the course by opening Jupyter Lab at [http://localhost:8888/](http://localhost:8888/)
+
+Open the [sample_chapter_idempotency](./notebooks/sample_chapter_idempotency.ipynb) to follow along.
 
 ## Spin Down
 
